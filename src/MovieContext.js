@@ -7,7 +7,7 @@ export const MovieProvider = (props) => {
     {
       name: "Harry Potter",
       price: "$10",
-      id: 23124
+      id: 13124
     },
     {
       name: "Game of Thrones",
@@ -18,16 +18,11 @@ export const MovieProvider = (props) => {
       name: "Roal of Ring",
       price: "$12",
       id: 235244
-    },
-    {
-      name: "King Kong",
-      price: "$12",
-      id: 235244
     }
   ]);
 
   return (
-    <MovieContext.Provider value={movies}>
+    <MovieContext.Provider value={[movies, setMovies]}>
       {props.children}
     </MovieContext.Provider>
   );

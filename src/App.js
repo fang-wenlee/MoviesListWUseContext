@@ -1,13 +1,15 @@
 import "./styles.css";
 import MovieList from "./MovieList";
 import Nav from "./Nav";
+import AddMovie from "./AddMovie";
 import { MovieProvider } from "./MovieContext";
 
 export default function App() {
   return (
     <MovieProvider>
       <div className="App">
-        <Nav name="Fang-Wen" />
+        <Nav />
+        <AddMovie />
         <MovieList />
       </div>
     </MovieProvider>
