@@ -1,10 +1,15 @@
 import "./styles.css";
+import MovieList from "./MovieList";
+import Nav from "./Nav";
+import { MovieProvider } from "./MovieContext";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <MovieProvider>
+      <div className="App">
+        <Nav name="Fang-Wen" />
+        <MovieList />
+      </div>
+    </MovieProvider>
   );
 }
